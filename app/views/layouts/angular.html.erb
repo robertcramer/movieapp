@@ -29,6 +29,28 @@
 				<div id="main" ng-view></div>
 			</div>
 		</div>
+
+		<div ng-controller="MoviesController">
+			<div class="container">
+				<div class="row">
+					<div ng-repeat="movie in movies" class="col-md-4 col-sm-6 col-xs-12">
+						<div class="movie-container">
+							<a href="/movie/{{movie.youtubeId}}">
+								<div class="thumbnail">
+									<div class="poster img-rounded">
+										<img ng-src="{{movie.posterUrl}}" class="" alt="{{movie.title}}" />
+									</div>
+								</div>
+								<div class="title">
+									{{movie.title}}
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div id="f">
 			<div class="container">
 				<div class="row">
@@ -38,6 +60,6 @@
 		</div>
 
 		<%= javascript_include_tag "application" %>
-		
+
 	</body>
 </html>
