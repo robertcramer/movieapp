@@ -69,4 +69,7 @@ angular.module('popcornApp', [])
 				movie.isFavorite = false;
 			};
 
-		});
+		})
+	.controller('MovieController', function($scope) {
+		console.log('MovieController is booting');
+	});
